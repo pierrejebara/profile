@@ -1,106 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Plus+Jakarta+Sans&family=Roboto:ital,wght@1,100&display=swap');
-
-body{
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  background-color: white;
-  color: black;
-  line-height: 35px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Plus+Jakarta+Sans:wght@400;500&family=Roboto:ital,wght@1,100&display=swap');
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  margin: 0 auto;
 }
 
-h1 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 25px;
-  color: #FF385C;
-  font-size: 30px;
+.flip-card-inner {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 20px;
-  color: #FF385C
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg)
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
 }
 
-.img-circle {
-  width:120px;
-  height:120px;
+.flip-card-front {
+  background-image: linear-gradient(45deg, #6f04d9,#d9048e);
+}
+
+.flip-card-front img {
+  width: 300px;
+  height: 300px;
+  margin-top: 1rem;
+}
+
+.flip-card-back {
+  background-image: linear-gradient(315deg,#6f04d9,#8a045c);
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+  width: 300px;
+  height: 300px;
+  margin-top: 1rem;
   border-radius: 50%;
 }
-
-.btn-pink:hover {
-  background-color: black;
-
+.flip-card-back h2 {
+  margin-bottom: 0.3rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 650px;
-  margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  text-align: center;
-  padding: 20px;
-
-}
-
-.text-center {
-  text-align: center;
-}
-
-.card-white {
-  background: white;
-  padding: 30px;
-  border: 1px solid white;
-  border-radius: 5px;
-  margin-bottom: 25px;
-  margin-top: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn-pink {
-  color: white;
-  background-color: #FF385C ;
-  border-radius: 5px;
-  padding:8px 10px;
-  font-size: 15px;
-}
-
-.animated-gif {
-  width: 25px;
-  height:25px;
+.flip-card-back h1 {
+  margin-top: 30px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .fa-brands {
   font-size: 50px;
-  padding: 8px;
-  color: #FF385C;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: white
 }
 
-@media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  .container {
-    width: 700px;
-  }
+.fa-brands:hover {
+  color: grey;
+  transition:0.6s;
 }
 
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container {
-    width: 500px;
-  }
+.flip-card-front img {
+  width: 300px;
+  height: 300px;
+  margin-top: 1rem;
+  border-radius: 50%;
+}
+.flip-card-front h2 {
+  margin-bottom: 0.3rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color:white;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .container {
-    width: 300px;
-  }
+.flip-card-front h1 {
+  margin-top: 30px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: white;
+}
+.white-card img {
+  border-radius: 50%;
+  width:100px;
+  height:100px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.white-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+
 }
