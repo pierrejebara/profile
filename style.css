@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Plus+Jakarta+Sans&family=Roboto:ital,wght@1,100&display=swap');
+
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  line-height: 35px;
+}
+
+h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 25px;
+  color: #FF385C;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  color: #FF385C
+}
+
+.img-circle {
+  width:120px;
+  height:120px;
+  border-radius: 50%;
+}
+
+a:hover {
+  background-color: black;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 650px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  text-align: center;
+  padding: 20px;
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card-white {
+  background: white;
+  padding: 30px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-pink {
+  color: white;
+  background-color: #FF385C ;
+  border-radius: 5px;
+  padding:8px 10px;
+  font-size: 15px;
+}
+
+.animated-gif {
+  width: 25px;
+  height:25px;
+}
+
+.fa-brands {
+  font-size: 50px;
+  padding: 8px;
+  color: #FF385C;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
